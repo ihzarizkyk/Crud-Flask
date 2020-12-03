@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block head %}
+<title>
+	index page
+</title>
+<h1>
+	INDEX PAGE - CRUD FLASK
+</h1>
+{% endblock %}
+
+{% block body %}
+
+	{% if products | length < 1 %}
+		<b>tidak ada produk</b>
+	{% else %}
+
+<table border="2">
+	<tr>
+		<th>produk</th>
+		<th>Tanggal</th>
+		<th>aksi</th>
+	</tr>
+
+	{% for p in products %}
+	<tr>
+		<td>{{ p.produk }}</td>
+		<td>{{ p.tanggal.date() }}</td>
+		<td>
+			<a href="/hapus/{{ p.id }}">
+				hapus
+			</a>
+			<br>
+			<a href="/ubah/{{ p.id }}">
+				ubah
+			</a>
+		</td>
+	</tr>
+	{% endfor %}
+
+</table>
+
+	{% endif %}
+
+<br><br>
+
+<form action="/" method="POST">
+	<input type="text" name="produk">
+	<button type="submit" name="tambah">
+		tambah
+	</button>
+</form>
+{% endblock %}

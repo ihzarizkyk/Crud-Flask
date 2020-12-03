@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block head %}
+<title>Ubah Data</title>
+<h1>
+	Ubah Data - CRUD FLASK
+</h1>
+{% endblock %}
+
+{% block body %}
+
+<form action="/ubah/{{ products.id }}" method="POST">
+	<label>
+		<b>Nama Produk :</b>
+	</label>
+	<br>
+	<input type="text" name="produk" id="produk" value="{{ products.produk }}">
+	<br><br>
+	<button type="submit" name="ubah">
+		ubah
+	</button>
+</form>
+
+{% endblock %}
