@@ -11,6 +11,17 @@
 
 {% block body %}
 
+<br>
+
+<form action="/" method="POST">
+	<input type="text" name="produk">
+	<button type="submit" name="tambah">
+		tambah
+	</button>
+</form>
+
+<br>
+
 	{% if products | length < 1 %}
 		<b>tidak ada produk</b>
 	{% else %}
@@ -42,12 +53,4 @@
 
 	{% endif %}
 
-<br><br>
-
-<form action="/" method="POST">
-	<input type="text" name="produk">
-	<button type="submit" name="tambah">
-		tambah
-	</button>
-</form>
 {% endblock %}
