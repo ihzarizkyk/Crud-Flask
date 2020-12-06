@@ -1,19 +1,22 @@
 # Crud Flask
 
 **Install Virtual Environment (pake pip / pip3) :**
-> pip3 install virtualenv
+`$ pip3 install virtualenv`
 
 **Buat Virtual Environment :**
-> virtualenv env
+`$ virtualenv env`
 
 **Aktifkan Virtual Environment (Linux) :**
-> source env/bin/activate
+`$ source env/bin/activate`
 
 **Aktifkan Debug Mode Flask :**
-> export FLASK_DEBUG=1
+`$ export FLASK_DEBUG=1`
 
 **Menjalankan Server Localhost Flask :**
-> flask run
+`$ flask run`
+
+**Install Flask :**
+`$ pip3 install flask`
 
 **Install flask_sqlalchemy :**
-> pip3 install flask_sqlalchemy
+`$ pip3 install flask_sqlalchemy`
